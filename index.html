@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hands Across Borders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" onclick="showPage('home')">
+    <div class="nav-logo-icon">🤝</div>
+    <div class="nav-logo-text">Hands<span>Across</span>Borders</div>
+  </a>
+  <ul class="nav-links">
+    <li><button id="nav-home" class="active" onclick="showPage('home')">Home</button></li>
+    <li><button id="nav-mission" onclick="showPage('mission')">Our Mission</button></li>
+    <li><button id="nav-gallery" onclick="showPage('gallery')">Our Hands</button></li>
+    <li><button id="nav-donate" class="nav-donate-btn" onclick="showPage('.')">💛 Donate</button></li>
+  </ul>
+</nav>
+
+<!-- ===================== HOME ===================== -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-badge"><span class="hero-hand">👋</span> Serving Ohio &amp; the World</div>
+    <h1>Giving a Hand<em>to those who need it.</em></h1>
+    <p>We 3D print, assemble, and deliver prosthetic hands to individuals with below-elbow limb differences — free of charge, full of heart.</p>
+    <div class="hero-btns">
+      <button class="btn btn-sky" onclick="showPage('mission')">Our Mission</button>
+      <button class="btn btn-gold" onclick="showPage('.')">Donate Today 💛</button>
+      <button class="btn btn-outline" onclick="showPage('gallery')">See Our Work</button>
+    </div>
+  </section>
+
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-num" data-target="150" data-suffix="+">0</span>
+      <span class="stat-label">Hands Delivered</span>
+      <div class="stat-bar"><div class="stat-bar-fill" data-width="85%"></div></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="12" data-suffix="">0</span>
+      <span class="stat-label">Countries Reached</span>
+      <div class="stat-bar"><div class="stat-bar-fill" data-width="70%"></div></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="100" data-suffix="%">0</span>
+      <span class="stat-label">Free of Charge</span>
+      <div class="stat-bar"><div class="stat-bar-fill" data-width="100%"></div></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="0" data-prefix="$" data-suffix="">$0</span>
+      <span class="stat-label">Cost to Recipients</span>
+      <div class="stat-bar"><div class="stat-bar-fill" data-width="0%"></div></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-label sr from-left">How It Works</span>
+      <h2 class="section-title sr from-bottom">From filament to freedom —<br>one print at a time.</h2>
+      <p class="section-subtitle sr from-bottom">Every hand starts in our lab and ends in the hands of someone whose life it changes.</p>
+      <div class="grid-4 tilt-grid sr-stagger">
+        <div class="card tilt-card" style="--card-color:#2196e8"><div class="card-icon">🖨️</div><h3>3D Print</h3><p>Industrial-grade 3D printers produce every component with precision and care — engineered for durability and comfort.</p></div>
+        <div class="card tilt-card" style="--card-color:#35cc88"><div class="card-icon" style="background:#e6fcf5">🔧</div><h3>Assemble</h3><p>Our skilled volunteers carefully assemble and test every hand, custom fitted to meet each individual's unique needs.</p></div>
+        <div class="card tilt-card" style="--card-color:#ffbb2e"><div class="card-icon" style="background:#fff8ec">📦</div><h3>Distribute</h3><p>We deliver across Ohio and partner globally to reach those who need them most — at absolutely no cost to recipients.</p></div>
+        <div class="card tilt-card" style="--card-color:#f25c3b"><div class="card-icon" style="background:#fef0ec">❤️</div><h3>Follow Up</h3><p>We stay in touch, checking in with every recipient to ensure their hand fits well and offering adjustments as needed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="process-strip">
+    <div class="section-inner" style="text-align:center">
+      <span class="section-label sr from-left">Our Process</span>
+      <h2 class="section-title sr from-bottom">From design to delivery</h2>
+    </div>
+    <div class="process-steps sr-stagger">
+      <div class="process-step"><div class="process-num">1</div><h4>Design & Customize</h4><p>We work with recipients to choose the right design for their lifestyle.</p></div>
+      <div class="process-step"><div class="process-num">2</div><h4>Print Components</h4><p>Our printers run around the clock producing high-quality parts.</p></div>
+      <div class="process-step"><div class="process-num">3</div><h4>Quality Check</h4><p>Every part is inspected for strength, fit, and finish before assembly.</p></div>
+      <div class="process-step"><div class="process-num">4</div><h4>Assembly</h4><p>Volunteers join, fasten, and calibrate each hand with care.</p></div>
+      <div class="process-step"><div class="process-num">5</div><h4>Deliver with Love</h4><p>We personally deliver or ship each hand and celebrate every moment.</p></div>
+    </div>
+  </div>
+
+<!--
+  <section class="section" style="background:var(--off-white)">
+    <div class="section-inner">
+      <span class="section-label sr from-left">Stories</span>
+      <h2 class="section-title sr from-bottom">Lives changed, one hand at a time.</h2>
+      <div class="testimonial-grid sr-stagger">
+        <div class="testimonial-card"><p>I never thought I'd be able to pick up a pencil again. The team didn't just give me a hand — they gave me my independence back.</p><div class="testimonial-author"><div class="testimonial-avatar">😊</div><div><div class="testimonial-name">Marcus T.</div><div class="testimonial-loc">Columbus, Ohio</div></div></div></div>
+        <div class="testimonial-card"><p>My daughter was born without her right hand. She now plays piano with her new hand and calls it her "superpower hand." We couldn't be more grateful.</p><div class="testimonial-author"><div class="testimonial-avatar">🌟</div><div><div class="testimonial-name">Priya K.</div><div class="testimonial-loc">Cleveland, Ohio</div></div></div></div>
+        <div class="testimonial-card"><p>We received a shipment of hands for our clinic in rural Guatemala. The smiles on the children's faces were something I will carry with me forever.</p><div class="testimonial-author"><div class="testimonial-avatar">🌎</div><div><div class="testimonial-name">Dr. Ana L.</div><div class="testimonial-loc">Quetzaltenango, Guatemala</div></div></div></div>
+      </div>
+    </div>
+  </section>
+-->
+
+  <section class="reach-section">
+    <div class="section-inner">
+      <span class="section-label sr from-left">Our Reach</span>
+      <h2 class="section-title sr from-bottom">Ohio &amp; Beyond</h2>
+      <p class="section-subtitle sr from-bottom">Rooted in Ohio — reaching across the globe.</p>
+      <div class="reach-cards sr-stagger">
+        <div class="reach-card"><span class="big-icon">🏠</span><h3>Across Ohio</h3><p>From Columbus to Cleveland, Dayton to Cincinnati, and everywhere in between.</p></div>
+        <div class="reach-card"><span class="big-icon">🌍</span><h3>Across the World</h3><p>International partnerships help us reach underserved regions in 12 countries and counting.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 class="sr from-bottom">Ready to make a difference?</h2>
+    <p class="sr from-bottom">Every dollar helps us print and deliver another life-changing prosthetic hand.</p>
+    <div class="cta-btns sr from-bottom">
+      <button class="btn btn-gold" onclick="showPage('.')">💛 Make a Donation</button>
+      <button class="btn btn-outline-white" onclick="showPage('gallery')">See Our Hands</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">🤝 Hands Across Borders</div>
+    <p>3D printing prosthetic hands for everyone</p>
+    <p>📍 Ohio, USA &nbsp;|&nbsp; ✉️ hello@handsacrossborders.org</p>
+    <div class="footer-links">
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('mission')">Mission</button>
+      <button onclick="showPage('gallery')">Our Hands</button>
+      <button onclick="showPage('.')">Donate</button>
+    </div>
+    <div class="footer-copy">© 2026 Hands Across Borders. All rights reserved. Made with ❤️.</div>
+  </footer>
+</div>
+
+<!-- ===================== MISSION ===================== -->
+<div class="page" id="page-mission">
+  <div class="mission-hero">
+    <span class="section-label">Who We Are</span>
+    <h1>Our Mission</h1>
+    <p>Every person deserves the ability to reach, hold, create, and connect — regardless of where they were born or what they were born with.</p>
+  </div>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-label sr from-left">Mission Statement</span>
+      <div class="mission-statement-block sr scale-up">
+        "Hands Across Borders exists to empower individuals with below-elbow limb differences by providing freely crafted, 3D-printed prosthetic hands — built with precision in Ohio, delivered with love across the world. We believe access to assistive technology is a human right, not a privilege."
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:3rem">
+        <div class="sr from-left">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title" style="font-size:1.75rem">Started with a single print.</h2>
+          <p style="color:var(--muted);font-size:0.97rem;font-weight:600;line-height:1.7;margin-bottom:1rem">Hands Across Borders began when our founder printed their first prosthetic hand for a neighbor's child in Columbus, Ohio. Witnessing the immediate impact made it clear — this had to be bigger.</p>
+          <p style="color:var(--muted);font-size:0.97rem;font-weight:600;line-height:1.7">We serve children and adults with below-elbow limb differences, partnering with hospitals, clinics, schools, and nonprofits to reach individuals who would otherwise go without.</p>
+        </div>
+        <div class="sr from-right" style="background:linear-gradient(135deg,var(--sky-light),#fffaef);border-radius:20px;padding:3rem;text-align:center">
+          <div style="font-size:4.5rem;margin-bottom:1rem">🖨️</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:1.9rem;font-weight:800;color:var(--dark)">One Printer.</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:1.9rem;font-weight:800;color:var(--sky)">Unlimited Potential.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--off-white)">
+    <div class="section-inner">
+      <span class="section-label sr from-left">What We Stand For</span>
+      <h2 class="section-title sr from-bottom">Our Core Values</h2>
+      <div class="values-scroll-track">
+        <div class="values-scroll">
+          <div class="value-card"><span class="value-icon">🌍</span><h3>Accessibility for All</h3><p>Prosthetics should never be a luxury. Every hand is provided at zero cost to the recipient.</p></div>
+          <div class="value-card"><span class="value-icon">🔬</span><h3>Innovation</h3><p>We continuously improve our designs using the latest 3D printing technology and open-source research.</p></div>
+          <div class="value-card"><span class="value-icon">🤗</span><h3>Community</h3><p>Rooted in Ohio and powered by volunteers who show up with tools, time, and tremendous heart.</p></div>
+          <div class="value-card"><span class="value-icon">🌱</span><h3>Sustainability</h3><p>We use eco-conscious materials and design hands that last, minimizing waste throughout our process.</p></div>
+          <div class="value-card"><span class="value-icon">🤝</span><h3>Partnership</h3><p>We collaborate with clinics, nonprofits, and aid organizations globally to maximize our reach.</p></div>
+          <div class="value-card"><span class="value-icon">✨</span><h3>Dignity</h3><p>Every recipient is treated with respect. Beautiful, colorful hands that people are proud to wear.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-label sr from-left">The People Behind the Prints</span>
+      <h2 class="section-title sr from-bottom">Our Team</h2>
+      <p class="section-subtitle sr from-bottom">Volunteers, engineers, and dreamers united by the belief that technology can change lives.</p>
+      <div class="team-grid sr-stagger">
+        <div class="team-card"><div class="team-avatar" style="background:#e6f4fd;color:#1266b0">RS</div><h4>Ravindra S.</h4><p>Founder & Outreach Coordinator</p></div>
+        <div class="team-card"><div class="team-avatar" style="background:#fff8ec;color:#d48a0e">PB</div><h4>Parthiv B.</h4><p>Founder & Operations Director</p></div>
+        <div class="team-card"><div class="team-avatar" style="background:#e6fcf5;color:#0f6e56">PM</div><h4>Pranav M.</h4><p>Founder</p></div>
+        <div class="team-card"><div class="team-avatar" style="background:#fef0ec;color:#993c1d">VP</div><h4>Vincent P.</h4><p>Founder & 3D Print Specialist</p></div>
+      </div>
+      <p style="margin-top:2rem;text-align:center;color:var(--muted);font-weight:700;font-size:0.9rem">+ Dozens of incredible volunteers who make it all happen 💙</p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 class="sr from-bottom">Believe in our mission?</h2>
+    <p class="sr from-bottom">Help us print more hands and change more lives.</p>
+    <div class="cta-btns sr from-bottom">
+      <button class="btn btn-gold" onclick="showPage('.')">💛 Donate Now</button>
+      <button class="btn btn-outline-white" onclick="showPage('gallery')">View Our Work</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">🤝 Hands Across Borders</div>
+    <p>3D printing prosthetic hands for everyone</p>
+    <p>📍 Ohio, USA &nbsp;|&nbsp; ✉️ hello@handsacrossborders.org</p>
+    <div class="footer-links">
+      <button onclick="showPage('home')">Home</button><button onclick="showPage('mission')">Mission</button>
+      <button onclick="showPage('gallery')">Our Hands</button><button onclick="showPage('.')">Donate</button>
+    </div>
+    <div class="footer-copy">© 2026 Hands Across Borders. All rights reserved. Made with ❤️.</div>
+  </footer>
+</div>
+
+<!-- ===================== GALLERY ===================== -->
+<div class="page" id="page-gallery">
+  <div class="gallery-hero">
+    <span class="section-label sr from-left">Our Prosthetic Hands</span>
+    <h1 class="section-title sr from-bottom" style="margin:0 auto 1rem">Built with care.<br>Worn with pride.</h1>
+    <p class="section-subtitle sr from-bottom" style="margin:0 auto">Each hand was designed, printed, and assembled by our team — then delivered to someone whose life it transformed.</p>
+  </div>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="gallery-grid sr-stagger">
+        <div class="gallery-card">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#e6f4fd,#b5d4f4)">
+            <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect x="80" y="90" width="40" height="60" rx="8" fill="#1a8fe3" opacity="0.9"/><rect x="60" y="70" width="18" height="50" rx="7" fill="#1266b0"/><rect x="82" y="60" width="16" height="55" rx="7" fill="#1a8fe3"/><rect x="102" y="58" width="16" height="57" rx="7" fill="#378add"/><rect x="122" y="66" width="16" height="50" rx="7" fill="#1266b0"/><rect x="68" y="110" width="12" height="35" rx="6" fill="#185fa5" transform="rotate(-30 74 125)"/><ellipse cx="100" cy="145" rx="25" ry="8" fill="#042c53" opacity="0.15"/></svg>
+          </div>
+          <div class="gallery-info"><h3>Classic Blue — "Voyager"</h3><p>Our most-requested design with sleek blue finish and precision grip. Ideal for everyday durability.</p><span class="gallery-tag">Adult Size</span><span class="gallery-tag" style="background:#e6fcf5;color:#0f6e56">Full Grip</span></div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#fff8ec,#fac775)">
+            <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect x="80" y="90" width="40" height="60" rx="8" fill="#f7a51e" opacity="0.9"/><rect x="60" y="72" width="18" height="48" rx="7" fill="#d48a0e"/><rect x="82" y="60" width="16" height="55" rx="7" fill="#f7a51e"/><rect x="102" y="58" width="16" height="57" rx="7" fill="#ef9f27"/><rect x="122" y="65" width="16" height="50" rx="7" fill="#d48a0e"/><rect x="68" y="110" width="12" height="35" rx="6" fill="#ba7517" transform="rotate(-30 74 125)"/><circle cx="100" cy="95" r="6" fill="white" opacity="0.4"/><ellipse cx="100" cy="147" rx="25" ry="7" fill="#412402" opacity="0.12"/></svg>
+          </div>
+          <div class="gallery-info"><h3>Sunshine Gold — "Solaris"</h3><p>Vibrant gold, designed to inspire confidence. Popular with younger recipients who love standing out.</p><span class="gallery-tag" style="background:#fff8ec;color:#d48a0e">Youth Size</span><span class="gallery-tag" style="background:#fbeaf0;color:#993556">Fan Favorite</span></div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#e6fcf5,#9fe1cb)">
+            <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect x="80" y="90" width="40" height="60" rx="8" fill="#2bbf7e" opacity="0.9"/><rect x="60" y="70" width="18" height="50" rx="7" fill="#1d9e75"/><rect x="82" y="60" width="16" height="55" rx="7" fill="#2bbf7e"/><rect x="102" y="58" width="16" height="57" rx="7" fill="#5dcaa5"/><rect x="122" y="66" width="16" height="50" rx="7" fill="#0f6e56"/><rect x="68" y="110" width="12" height="35" rx="6" fill="#085041" transform="rotate(-30 74 125)"/><ellipse cx="100" cy="146" rx="25" ry="7" fill="#04342c" opacity="0.15"/></svg>
+          </div>
+          <div class="gallery-info"><h3>Emerald Earth — "Verdant"</h3><p>Eco-themed, made with sustainable PLA filament. A green finish that connects recipients to the natural world.</p><span class="gallery-tag" style="background:#eaf3de;color:#3b6d11">Eco-Friendly</span><span class="gallery-tag">Adult Size</span></div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#fbeaf0,#f4c0d1)">
+            <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect x="80" y="90" width="40" height="60" rx="8" fill="#d4537e" opacity="0.9"/><rect x="60" y="70" width="18" height="50" rx="7" fill="#993556"/><rect x="82" y="60" width="16" height="55" rx="7" fill="#d4537e"/><rect x="102" y="58" width="16" height="57" rx="7" fill="#ed93b1"/><rect x="122" y="66" width="16" height="50" rx="7" fill="#993556"/><rect x="68" y="110" width="12" height="35" rx="6" fill="#72243e" transform="rotate(-30 74 125)"/><ellipse cx="100" cy="147" rx="25" ry="7" fill="#4b1528" opacity="0.12"/></svg>
+          </div>
+          <div class="gallery-info"><h3>Rose Bloom — "Blossom"</h3><p>Empowering and lightweight, loved by our youngest recipients. Perfectly proportioned for kids.</p><span class="gallery-tag" style="background:#fbeaf0;color:#993556">Child Size</span><span class="gallery-tag" style="background:#fff8ec;color:#d48a0e">Lightweight</span></div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#f1efe8,#d3d1c7)">
+            <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect x="80" y="90" width="40" height="60" rx="8" fill="#5f5e5a" opacity="0.9"/><rect x="60" y="70" width="18" height="50" rx="7" fill="#444441"/><rect x="82" y="60" width="16" height="55" rx="7" fill="#888780"/><rect x="102" y="58" width="16" height="57" rx="7" fill="#b4b2a9"/><rect x="122" y="66" width="16" height="50" rx="7" fill="#444441"/><rect x="68" y="110" width="12" height="35" rx="6" fill="#2c2c2a" transform="rotate(-30 74 125)"/><ellipse cx="100" cy="147" rx="25" ry="7" fill="#2c2c2a" opacity="0.18"/></svg>
+          </div>
+          <div class="gallery-info"><h3>Steel Grey — "Atlas"</h3><p>Industrial-inspired for adults who want a rugged, professional look. Built for heavy-duty daily use.</p><span class="gallery-tag" style="background:#f1efe8;color:#5f5e5a">Adult Size</span><span class="gallery-tag">Heavy Duty</span></div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#eeedfe,#afa9ec)">
+            <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect x="80" y="90" width="40" height="60" rx="8" fill="#7f77dd" opacity="0.9"/><rect x="60" y="70" width="18" height="50" rx="7" fill="#534ab7"/><rect x="82" y="60" width="16" height="55" rx="7" fill="#7f77dd"/><rect x="102" y="58" width="16" height="57" rx="7" fill="#afa9ec"/><rect x="122" y="66" width="16" height="50" rx="7" fill="#534ab7"/><rect x="68" y="110" width="12" height="35" rx="6" fill="#3c3489" transform="rotate(-30 74 125)"/><circle cx="90" cy="80" r="5" fill="white" opacity="0.3"/><circle cx="110" cy="76" r="3" fill="white" opacity="0.3"/><ellipse cx="100" cy="147" rx="25" ry="7" fill="#26215c" opacity="0.15"/></svg>
+          </div>
+          <div class="gallery-info"><h3>Cosmic Purple — "Galaxy"</h3><p>Fan-favorite for kids and teens. A rich purple finish that looks like it came from outer space.</p><span class="gallery-tag" style="background:#eeedfe;color:#534ab7">Youth/Teen</span><span class="gallery-tag" style="background:#fbeaf0;color:#993556">Fan Favorite</span></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:3rem">
+        <p style="font-size:1.05rem;color:var(--muted);font-weight:700;margin-bottom:1.5rem">🎨 Recipients can request any color or design combination — customization is our specialty!</p>
+        <button class="btn btn-sky" onclick="showPage('.')">Support Our Work 💙</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--off-white)">
+    <div class="section-inner">
+      <span class="section-label sr from-left">The Technology</span>
+      <h2 class="section-title sr from-bottom">What goes into every hand.</h2>
+      <div class="grid-4 tilt-grid sr-stagger">
+        <div class="card tilt-card" style="--card-color:#2196e8"><div class="card-icon">🔩</div><h3>Medical-Grade PLA</h3><p>Biocompatible, food-safe filaments that are durable, lightweight, and safe for skin contact.</p></div>
+        <div class="card tilt-card" style="--card-color:#ffbb2e"><div class="card-icon" style="background:#fff8ec">🖨️</div><h3>FDM 3D Printing</h3><p>Fused deposition modeling gives precise, repeatable results on every component.</p></div>
+        <div class="card tilt-card" style="--card-color:#35cc88"><div class="card-icon" style="background:#e6fcf5">📐</div><h3>Open-Source Designs</h3><p>We use and contribute to open-source designs from e-NABLE and humanitarian engineering communities.</p></div>
+        <div class="card tilt-card" style="--card-color:#7f77dd"><div class="card-icon" style="background:#eeedfe">🎯</div><h3>Custom Fitting</h3><p>Each hand is individually sized and adjusted directly with the recipient for comfort and function.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">🤝 Hands Across Borders</div>
+    <p>3D printing prosthetic hands for everyone</p>
+    <p>📍 Ohio, USA &nbsp;|&nbsp; ✉️ hello@handsacrossborders.org</p>
+    <div class="footer-links">
+      <button onclick="showPage('home')">Home</button><button onclick="showPage('mission')">Mission</button>
+      <button onclick="showPage('gallery')">Our Hands</button><button onclick="showPage('.')">Donate</button>
+    </div>
+    <div class="footer-copy">© 2026 Hands Across Borders. All rights reserved. Made with ❤️.</div>
+  </footer>
+</div>
+
+<!-- ================================================
+  JAVASCRIPT
+================================================ -->
+
+<script src="src/main.js"></script>
+</body>
+</html>
