@@ -1,4 +1,8 @@
+[build]
+publish = "dist"
+command = "npm run build"
+
 [[redirects]]
-    from="/*"
-    to = "/:splat.hmtl"
-    status = 200
+from = "/*"
+to = "/:splat.html"
+status = 200
