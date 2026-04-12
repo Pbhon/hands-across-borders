@@ -98,9 +98,6 @@ nav.scrolled {
   box-shadow: 0 6px 20px rgba(255,187,46,0.4) !important;
 }
 
-/* ── PAGES ── */
-.page { display: none; }
-.page.active { display: block; }
 
 /* ── BUTTONS ── */
 .btn {

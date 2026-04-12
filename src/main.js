@@ -1,15 +1,15 @@
 // ── PAGE NAVIGATION ──
 let selectedAmt = '25';
 
-function showPage(page) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page-' + page).classList.add('active');
-    document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
-    const btn = document.getElementById('nav-' + page);
-    if (btn) btn.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setTimeout(initScrollReveal, 80);
-}
+// function showPage(page) {
+//     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+//     document.getElementById('page-' + page).classList.add('active');
+//     document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+//     const btn = document.getElementById('nav-' + page);
+//     if (btn) btn.classList.add('active');
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//     setTimeout(initScrollReveal, 80);
+// }
 
 function clearAmtSel() {
     document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
