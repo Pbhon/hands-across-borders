@@ -3,6 +3,11 @@ publish = "dist"
 command = "npm run build"
 
 [[redirects]]
-from = "/*"
-to = "/:splat.html"
+from = "/hands/mission"
+to = "/hands/mission.html"
+status = 200
+
+[[redirects]]
+from = "/hands/gallery"
+to = "/hands/gallery.html"
 status = 200
