@@ -415,7 +415,7 @@ footer p { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.4rem; line-he
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   max-width: 900px;
   margin: 0 auto;
 
