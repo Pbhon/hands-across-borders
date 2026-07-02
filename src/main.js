@@ -138,10 +138,29 @@ document.querySelectorAll('.values-scroll').forEach(el => {
     }, { passive: false });
 });
 
+function initNavHamburger() {
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (!hamburger || !navLinks) return;
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            navLinks.classList.remove('open');
+        });
+    });
+}
+
 // ── INIT ──
 document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initRipples();
     initNavScroll();
     initCardTilt();
+    initNavHamburger();
 });
