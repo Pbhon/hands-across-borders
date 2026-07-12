@@ -11,6 +11,13 @@ let selectedAmt = '25';
 //     setTimeout(initScrollReveal, 80);
 // }
 
+function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('contact-success').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function clearAmtSel() {
     document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
     selectedAmt = null;
@@ -154,6 +161,8 @@ function initNavHamburger() {
             navLinks.classList.remove('open');
         });
     });
+
+
 }
 
 // ── INIT ──
