@@ -21,12 +21,11 @@
         <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="nav-links">
-        <li><button onclick="location.href='https://hands-across-borders.org'">Home</button></li>
-        <li><button>Our Mission</button></li>
-        <li><button>Our Hands</button></li>
-        <li><button>Why Us</button></li>
-        <li><button class="active">Contact Us</button></li>
-        <li><button class="nav-donate-btn">💛 Donate</button></li>
+        <li><button id="nav-home" onclick="location.href='index.html'">Home</button></li>
+        <li><button id="nav-mission" onclick="location.href='../hands/mission.html'">Our Mission</button></li>
+        <li><button id="nav-gallery" onclick="location.href='../hands/gallery.html'">Our Hands</button></li>
+        <li><button id="nav-contact-us" class="active" onclick="location.href='../hands/contact-us.html'">Contact Us</button></li>
+        <li><button id="nav-donate" class="nav-donate-btn" onclick="window.open('https://www.gofundme.com/f/support-hands-across-borders-prosthetic-mission', '_blank', 'noopener,noreferrer')">💛 Donate</button></li>
     </ul>
 </nav>
 
@@ -49,7 +48,7 @@
                 <span class="contact-card-action">Send an email →</span>
             </a>
 
-            <a href="https://forms.google.com" target="_blank" class="card contact-card-link">
+            <a href="https://forms.gle/8ayGejzrBWcTAZja8" target="_blank" class="card contact-card-link">
                 <div class="card-icon">📋</div>
                 <h3>Request a hand</h3>
                 <p>Fill out our recipient intake form and we'll be in touch within a few days.</p>
@@ -67,95 +66,94 @@
     </div>
 </section>
 
-<!-- CONTACT FORM + INFO SPLIT -->
-<section class="section bg-off">
-    <div class="section-inner">
-        <div class="contact-split">
+<!--&lt;!&ndash; CONTACT FORM + INFO SPLIT &ndash;&gt;-->
+<!--<section class="section bg-off">-->
+<!--    <div class="section-inner">-->
+<!--        <div class="contact-split">-->
 
-            <!-- LEFT: FORM -->
-            <div class="donate-form-wrap">
-                <h2>Send us a message</h2>
-                <div>
-                    <p>We read every message and aim to respond within 2 business days. We will respond with information regarding questions and further information to get a hand.</p>
+<!--            &lt;!&ndash; LEFT: FORM &ndash;&gt;-->
+<!--            <div class="donate-form-wrap">-->
+<!--                <h2>Send us a message</h2>-->
+<!--                <div>-->
+<!--                    <p>We read every message and aim to respond within 2 business days. We will respond with information regarding questions and further information to get a hand.</p>-->
 
-                    <form id="contact-form" action="https://formspree.io/f/xaqrwdjq" method="POST" onsubmit="handleSubmit(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="first-name">First name</label>
-                                <input type="text" id="first-name" placeholder="Jane" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="last-name">Last name</label>
-                                <input type="text" id="last-name" placeholder="Smith" required />
-                            </div>
-                        </div>
+<!--                    <form id="contact-form" onsubmit="handleSubmit(event)">                        <div class="form-row">-->
+<!--                            <div class="form-group">-->
+<!--                                <label for="first-name">First name</label>-->
+<!--                                <input type="text" id="first-name" name="first_name" placeholder="Jane" required />-->
+<!--                            </div>-->
+<!--                            <div class="form-group">-->
+<!--                                <label for="last-name">Last name</label>-->
+<!--                                <input type="text" id="last-name" name="last_name" placeholder="Smith" required />-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" id="email" placeholder="jane@example.com" required />
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <label for="email">Email address</label>-->
+<!--                            <input type="email" id="email" name="email" placeholder="jane@example.com" required />-->
+<!--                        </div>-->
 
-                        <div class="form-group">
-                            <label for="reason">What can we help you with?</label>
-                            <select id="reason" name="reason" required>                                <option value="" disabled selected>Select a reason...</option>                                <option value="request">I need a prosthetic hand</option>
-                                <option value="donate">I want to donate</option>
-                                <option value="partner">Partnership inquiry</option>
-                                <option value="media">Media / press</option>
-                                <option value="other">Something else</option>
-                            </select>
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <label for="reason">What can we help you with?</label>-->
+<!--                            <select id="reason" name="reason" required>                                <option value="" disabled selected>Select a reason...</option>                                <option value="request">I need a prosthetic hand</option>-->
+<!--                                <option value="donate">I want to donate</option>-->
+<!--                                <option value="partner">Partnership inquiry</option>-->
+<!--                                <option value="media">Media / press</option>-->
+<!--                                <option value="other">Something else</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
 
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell us a little more..." rows="5" required></textarea>
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <label for="message">Message</label>-->
+<!--                            <textarea id="message" name="message" placeholder="Tell us a little more..." rows="5" required></textarea>-->
+<!--                        </div>-->
 
-                        <button type="submit" class="donate-submit">Send message 📨</button>
-                    </form>
+<!--                        <button type="submit" class="donate-submit">Send message 📨</button>-->
+<!--                    </form>-->
 
-                    <div class="donate-success" id="contact-success">
-                        <span class="check">✅</span>
-                        <h2>Message sent!</h2>
-                        <p>Thanks for reaching out. We'll get back to you within 2 business days.</p>
-                    </div>
-                </div>
-            </div>
+<!--                    <div class="donate-success" id="contact-success">-->
+<!--                        <span class="check">✅</span>-->
+<!--                        <h2>Message sent!</h2>-->
+<!--                        <p>Thanks for reaching out. We'll get back to you within 2 business days.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <!-- RIGHT: INFO -->
-            <div class="contact-info-col">
-                <div class="contact-info-block">
-                    <span class="contact-info-icon">⏱️</span>
-                    <div>
-                        <h4>Response time</h4>
-                        <p>We typically respond within 2 business days. For urgent matters, email us directly.</p>
-                    </div>
-                </div>
-                <div class="contact-info-block">
-                    <span class="contact-info-icon">🌍</span>
-                    <div>
-                        <h4>International requests</h4>
-                        <p>We make and ship hands internationally but it may take longer. We will send follow up information after the email is sent.</p>
-                    </div>
-                </div>
-                <div class="contact-info-block">
-                    <span class="contact-info-icon">🖨️</span>
-                    <div>
-                        <h4>Requesting a hand</h4>
-                        <p>After you submit, we'll follow up to gather measurements and preferences. Every hand is custom-made at no cost to you.</p>
-                    </div>
-                </div>
-                <div class="contact-info-block">
-                    <span class="contact-info-icon">❤️</span>
-                    <div>
-                        <h4>Volunteer inquiries</h4>
-                        <p>No specific skills required — just passion. We'll find a role that fits your schedule and abilities.</p>
-                    </div>
-                </div>
-            </div>
+<!--            &lt;!&ndash; RIGHT: INFO &ndash;&gt;-->
+<!--            <div class="contact-info-col">-->
+<!--                <div class="contact-info-block">-->
+<!--                    <span class="contact-info-icon">⏱️</span>-->
+<!--                    <div>-->
+<!--                        <h4>Response time</h4>-->
+<!--                        <p>We typically respond within 2 business days. For urgent matters, email us directly.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="contact-info-block">-->
+<!--                    <span class="contact-info-icon">🌍</span>-->
+<!--                    <div>-->
+<!--                        <h4>International requests</h4>-->
+<!--                        <p>We make and ship hands internationally but it may take longer. We will send follow up information after the email is sent.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="contact-info-block">-->
+<!--                    <span class="contact-info-icon">🖨️</span>-->
+<!--                    <div>-->
+<!--                        <h4>Requesting a hand</h4>-->
+<!--                        <p>After you submit, we'll follow up to gather measurements and preferences. Every hand is custom-made at no cost to you.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="contact-info-block">-->
+<!--                    <span class="contact-info-icon">❤️</span>-->
+<!--                    <div>-->
+<!--                        <h4>Volunteer inquiries</h4>-->
+<!--                        <p>No specific skills required — just passion. We'll find a role that fits your schedule and abilities.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
-        </div>
-    </div>
-</section>
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <!-- FAQ -->
 <section class="section">
@@ -205,7 +203,8 @@
     <div class="footer-copy">© 2026 Hands Across Borders. All rights reserved. Made with ❤️.</div>
 </footer>
 
-<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="module" src="/src/main.js"></script>
 
 </body>
 </html>

@@ -11,11 +11,54 @@ let selectedAmt = '25';
 //     setTimeout(initScrollReveal, 80);
 // }
 
-function handleSubmit(e) {
+// Initialize EmailJS
+emailjs.init({
+    publicKey: "2uEUzqEv0yI9I5fFU",
+});
+
+async function handleSubmit(e) {
     e.preventDefault();
-    document.getElementById('contact-form').style.display = 'none';
-    document.getElementById('contact-success').style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const form = document.getElementById("contact-form");
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    const templateParams = {
+        first_name: document.getElementById("first-name").value.trim(),
+        last_name: document.getElementById("last-name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        reason: document.getElementById("reason").value,
+        message: document.getElementById("message").value.trim(),
+    };
+
+    try {
+        await emailjs.send(
+            "service_f69bzwc",
+            "template_qcw0hhm",
+            templateParams
+        );
+
+        form.reset();
+        form.style.display = "none";
+        document.getElementById("contact-success").style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+
+    } catch (error) {
+        console.error("EmailJS Error:", error);
+
+        submitButton.disabled = false;
+        submitButton.textContent = "Send message 📨";
+
+        alert(
+            "Something went wrong. Please try again or email us directly at handsacrossborder@gmail.com."
+        );
+    }
 }
 
 function clearAmtSel() {
