@@ -607,6 +607,107 @@ footer p { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.4rem; line-he
 .tilt-grid { perspective: 1200px; }
 .tilt-card { transform-style: preserve-3d; will-change: transform; }
 
+/* ── GALLERY PAGE ── */
+.gallery-hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.gallery-hero p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 600;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.gallery-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-filter-btn {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 40px;
+  padding: 8px 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gallery-filter-btn:hover {
+  border-color: var(--sky);
+  color: var(--sky);
+  background: var(--sky-light);
+}
+
+.gallery-filter-btn.active {
+  background: var(--sky);
+  border-color: var(--sky);
+  color: white;
+}
+
+.gallery-img-real {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--off-white);
+}
+
+.gallery-img-real img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-img-real img {
+  transform: scale(1.04);
+}
+
+.gallery-video-wrap {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--dark);
+  overflow: hidden;
+}
+
+.gallery-video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-empty {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.gallery-empty span {
+  font-size: 3rem;
+}
+
+.gallery-empty p {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
 /* ── MISC ── */
 @media (max-width: 640px) {
   .nav-hamburger { display: flex; }
