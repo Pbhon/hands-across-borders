@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hands Across Borders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+
+
+
+<nav>
+  <a class="nav-logo" onclick="location.href='../index.html'">
+    <div class="nav-logo-icon">
+      <img src="../src/assets/hands_logo_no_text.png" alt="" style="width: 45px; height: 45px">
+    </div>
+    <div class="nav-logo-text">Hands<span>Across</span>Borders</div>
+  </a>
+
+  <button class="nav-hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><button id="nav-home" onclick="location.href='../index.html'">Home</button></li>
+    <li><button id="nav-mission" onclick="location.href='../hands/mission.html'">Our Mission</button></li>
+    <li><button id="nav-our-hands" class="active" onclick="location.href='../hands/our-hands.html'">Our Hands</button></li>
+    <li><button id="nav-gallery" onclick="location.href='../hands/gallery.html'">Gallery</button></li>
+    <li><button id="nav-contact-us" onclick="location.href='../hands/contact-us.html'">Contact Us</button></li>
+    <li><button id="nav-donate" class="nav-donate-btn" onclick="window.open('https://www.gofundme.com/f/support-hands-across-borders-prosthetic-mission', '_blank');">💛 Donate</button></li>
+  </ul>
+</nav>
+
+
+<div class="page" id="page-gallery">
+  <div class="gallery-hero">
+    <span class="section-label sr from-left">Our Prosthetic Hands</span>
+    <h1 class="section-title sr from-bottom" style="margin:0 auto 1rem">Built with care.<br>Worn with pride.</h1>
+    <p class="section-subtitle sr from-bottom" style="margin:0 auto">Each hand was designed, printed, and assembled by our team — then delivered to someone whose life it transformed.</p>
+  </div>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="gallery-grid sr-stagger">
+        <div class="gallery-card">
+          <div class="gallery-img" style="background:linear-gradient(135deg,#e6f4fd,#b5d4f4)">
+            <img src="../Unlimbited%20Phoenix%20Hand.jpg" alt="Unlimbited Phoenix Hand" style="width: 400px; height: 300px;">
+          </div>
+          <div class="gallery-info"><h3>Unlimbited Phoenix Hand</h3><p>Minimalist model with basic movement capabilities. It is able to lift 35+ pounds of force. Made of heat resistant PETG.</p><span class="gallery-tag">Custom Fit</span><span class="gallery-tag" style="background:#e6fcf5;color:#0f6e56">Custom Color</span></div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:3rem;">
+        <p style="font-size:1.05rem;color:var(--muted);font-weight:700;margin-bottom:1.5rem">🎨 Recipients can request any color or design combination — customization is our specialty!</p>
+        <div class='hero-btns'>
+          <button class="btn btn-sky" onclick="location.href='mailto:handsacrossborder@gmail.com'">Connect With Us 📧</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--off-white)">
+    <div class="section-inner">
+      <span class="section-label sr from-left">The Technology</span>
+      <h2 class="section-title sr from-bottom">What goes into every hand.</h2>
+      <div class="grid-4 tilt-grid sr-stagger">
+        <div class="card tilt-card" style="--card-color:#2196e8"><div class="card-icon">🔩</div><h3>Medical-Grade PLA</h3><p>Biocompatible, food-safe filaments that are durable, lightweight, and safe for skin contact.</p></div>
+        <div class="card tilt-card" style="--card-color:#ffbb2e"><div class="card-icon" style="background:#fff8ec">🖨️</div><h3>FDM 3D Printing</h3><p>Fused deposition modeling gives precise, repeatable results on every component.</p></div>
+        <div class="card tilt-card" style="--card-color:#35cc88"><div class="card-icon" style="background:#e6fcf5">📐</div><h3>Open-Source Designs</h3><p>We use and contribute to open-source designs from e-NABLE and humanitarian engineering communities.</p></div>
+        <div class="card tilt-card" style="--card-color:#7f77dd"><div class="card-icon" style="background:#eeedfe">🎯</div><h3>Custom Fitting</h3><p>Each hand is individually sized and adjusted directly with the recipient for comfort and function.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<footer>
+  <div class="footer-logo">🤝 Hands Across Borders</div>
+  <p>3D printing prosthetic hands for everyone</p>
+  <p>📍 Ohio, USA &nbsp;|&nbsp; ✉️ handsacrossborder@gmail.com</p>
+  <div class="footer-links">
+    <button onclick="location.href='../index.html'">Home</button>
+    <button onclick="location.href='../hands/mission.html'">Mission</button>
+    <button onclick="location.href='../hands/our-hands.html'">Our Hands</button>
+    <button onclick="window.open('https://www.gofundme.com/f/support-hands-across-borders-prosthetic-mission', '_blank');">Donate</button>
+  </div>
+  <div class="footer-copy">© 2026 Hands Across Borders. All rights reserved. Made with ❤️.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="module" src="../src/main.js"></script>
+
+</body>
+</html>
