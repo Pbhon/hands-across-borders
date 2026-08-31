@@ -10,8 +10,9 @@ export default defineConfig({
             input: {
                 main:    resolve(__dirname, 'index.html'),
                 mission: resolve(__dirname, 'hands/mission.html'),
-                gallery: resolve(__dirname, 'hands/our-hands.html'),
+                our_hands: resolve(__dirname, 'hands/our-hands.html'),
                 contact: resolve(__dirname, 'hands/contact-us.html'),
+                gallery: resolve(__dirname, 'hands/gallery.html'),
             }
         }
     }
