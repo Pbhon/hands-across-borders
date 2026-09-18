@@ -35,7 +35,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="gallery-hero">
+<section class="page-hero">
     <p class="section-label">Our work</p>
     <h1>Hands we've made. Lives we've changed.</h1>
     <p>Every photo and video here represents a real person who received a hand at no cost. This is what your support makes possible.</p>
@@ -87,7 +87,7 @@
 
             <div class="gallery-card" data-type="video">
                 <div class="gallery-img gallery-video-wrap">
-                    <video controls poster="../src/assets/gallery/video1-thumb.jpg">
+                    <video controls preload="metadata">
                         <source src="../src/assets/michelle%20hand%20video.mp4" type="video/mp4" />
                     </video>
                 </div>
@@ -117,7 +117,7 @@
     <p>Every donation helps us create more moments like these — completely free for the people who receive them.</p>
     <div class="cta-btns">
         <a href="https://www.gofundme.com/f/support-hands-across-borders-prosthetic-mission" target="_blank" class="btn btn-gold">💛 Donate now</a>
-        <a href="contact.html" class="btn btn-outline-white">Contact us</a>
+        <a href="contact-us.html" class="btn btn-outline-white">Contact us</a>
     </div>
 </section>
 
@@ -129,13 +129,13 @@
     <div class="footer-links">
         <button onclick="location.href='../index.html'">Home</button>
         <button onclick="location.href='mission.html'">Mission</button>
-        <button onclick="location.href='gallery.html'">Our Hands</button>
-        <button onclick="location.href='contact.html'">Contact</button>
+        <button onclick="location.href='our-hands.html'">Our Hands</button>
+        <button onclick="location.href='contact-us.html'">Contact</button>
     </div>
     <div class="footer-copy">© 2026 Hands Across Borders. All rights reserved. Made with ❤️.</div>
 </footer>
 
-<script src="../main.js"></script>
+<script type="module" src="../src/main.js"></script>
 <script>
     function filterGallery(type, btn) {
         document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));

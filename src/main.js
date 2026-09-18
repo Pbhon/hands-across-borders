@@ -11,10 +11,12 @@ let selectedAmt = '25';
 //     setTimeout(initScrollReveal, 80);
 // }
 
-// Initialize EmailJS
-emailjs.init({
-    publicKey: "2uEUzqEv0yI9I5fFU",
-});
+// Initialize EmailJS only on pages where the library is loaded.
+if (typeof emailjs !== 'undefined') {
+    emailjs.init({
+        publicKey: "2uEUzqEv0yI9I5fFU",
+    });
+}
 
 async function handleSubmit(e) {
     e.preventDefault();
@@ -196,12 +198,14 @@ function initNavHamburger() {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('open');
         navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('open')));
     });
 
     navLinks.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', () => {
             hamburger.classList.remove('open');
             navLinks.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
         });
     });
 
