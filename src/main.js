@@ -1,3 +1,8 @@
+// ── VERCEL ANALYTICS ──
+import { inject } from '@vercel/analytics';
+
+inject();
+
 // ── PAGE NAVIGATION ──
 let selectedAmt = '25';
 
